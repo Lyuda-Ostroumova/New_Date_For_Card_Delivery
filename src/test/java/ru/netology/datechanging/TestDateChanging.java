@@ -1,6 +1,7 @@
 package ru.netology.datechanging;
 
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -20,7 +21,7 @@ public class TestDateChanging {
     @Test
     void shouldSubmitForCardDelivery() {
 
-        // Configuration.headless = true;
+        Configuration.headless = true;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd" + "." + "MM" + "." + "yyyy");
 
         open("http://localhost:9999");
